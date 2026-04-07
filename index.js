@@ -56,8 +56,8 @@ return items.map(item =>`${item.id}#${item.name}#${item.name.length}`);
  * @returns {Item[]} all items in the "fruit" category
  */
 function getFruits(items) {
-  // TODO
-}filter
+return items.filter(item => item.category === "fruit");
+}
 
 /**
  * @param {Item[]} items
@@ -65,8 +65,8 @@ function getFruits(items) {
  * @returns {Item[]} all items in the given category
  */
 function getItemsByCategory(items, category) {
-  // TODO
-}fiter
+return items.filter(item => item.category === category);  
+}
 
 /**
  * An item is considered "cheap" if its price is $2.50 or less.
@@ -74,29 +74,29 @@ function getItemsByCategory(items, category) {
  * @returns {Item[]} all cheap items
  */
 function getCheapItems(items) {
-  // TODO
-} filter
+return items.filter(item => item.price <= 2.50)
+}
 
 /**
  * @param {Item[]} items
  * @returns {number} the total quantity of all items given
  */
 function countItems(items) {
-  // TODO
-}reduce
+return items.reduce((total, item) => total + item.quantity, 0);
+}
 
 /**
  * @param {Item[]} items
  * @returns {number} the cost of purchasing every single item
  */
 function getTotalCost(items) {
-  // TODO
-}reduce
+return items.reduce((cost, item) => cost + item.price, 0);
+}
 
 /**
  * @param {Item[]} items
  * @returns {Item} the item with the highest price
  */
 function getMostExpensiveItem(items) {
-  // TODO
-}reduce
+return items.reduce((price, item) => item.price > price.price ? item : price); 
+}
