@@ -27,7 +27,7 @@ const INVENTORY = [
  * @returns {number[]} ids of given items
  */
 function getIds(items) {
-  // TODO
+return items.map(items => item.id);
 }
 
 /**
@@ -35,7 +35,7 @@ function getIds(items) {
  * @returns {string[]} categories of given items
  */
 function getCategories(items) {
-  // TODO
+return items.map(items => item.category);
 }
 
 /**
@@ -48,7 +48,7 @@ function getCategories(items) {
  * @returns {string[]} SKUs of given items
  */
 function getSkus(items) {
-  // TODO
+return items.map(item =>`${item.id}#${item.name}#${item.name.length}`);
 }
 
 /**
@@ -57,7 +57,7 @@ function getSkus(items) {
  */
 function getFruits(items) {
   // TODO
-}
+}filter
 
 /**
  * @param {Item[]} items
@@ -66,7 +66,7 @@ function getFruits(items) {
  */
 function getItemsByCategory(items, category) {
   // TODO
-}
+}fiter
 
 /**
  * An item is considered "cheap" if its price is $2.50 or less.
@@ -75,7 +75,7 @@ function getItemsByCategory(items, category) {
  */
 function getCheapItems(items) {
   // TODO
-}
+} filter
 
 /**
  * @param {Item[]} items
@@ -83,7 +83,7 @@ function getCheapItems(items) {
  */
 function countItems(items) {
   // TODO
-}
+}reduce
 
 /**
  * @param {Item[]} items
@@ -91,7 +91,7 @@ function countItems(items) {
  */
 function getTotalCost(items) {
   // TODO
-}
+}reduce
 
 /**
  * @param {Item[]} items
@@ -99,4 +99,4 @@ function getTotalCost(items) {
  */
 function getMostExpensiveItem(items) {
   // TODO
-}
+}reduce
